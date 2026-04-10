@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>大家好</title>
+            <style>
+                .btn-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                }
+                
+                .interactive-btn {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    background-color: #4CAF50;
+                    border: 3px solid rgba(255, 255, 255, 0.5);
+                    color: white;
+                    font-size: 16px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    outline: none;
+                }
+                
+                .interactive-btn:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+                }
+                
+                @keyframes shake {
+                    0%, 100% { transform: translateX(0); }
+                    20%, 60% { transform: translateX(-5px); }
+                    40%, 80% { transform: translateX(5px); }
+                }
+                
+                .shake {
+                    animation: shake 0.5s ease;
+                }
+            </style>
+    </head>
+    <body>
+        <h1>大家好，我是肖逸可</h1>
+        <h2>这是我做的网页</h2>
+        <h3>杨四号紫 is gay</h3>
+        <h3>用我下面的这个看</h3>
+        <div>以后我会改善这个网页的</div>
+        <div class="btn-container">
+            <button class="interactive-btn" id="myBtn">点击我</button>
+        </div>
+        <a href="https://www.bilibili.com/video/BV1skStYQE6d?spm_id_from=333.788.videopod.sections&vd_source=52907d26a9ae0dca9ddd327284af109f">这是小灯塔学堂（皮皮将水浒传）</a>
+        <br><a href="https://www.bilibili.com">这是b站</a>
+        <br><iframe src="https://www.bilibili.com/video/BV1skStYQE6d?spm_id_from=333.788.videopod.sections&vd_source=52907d26a9ae0dca9ddd327284af109f"  width="1000" height="750" frameborder="0"></iframe>
+        <script>
+            const btn = document.getElementById("myBtn");
+            
+            btn.addEventListener("click", function() {
+
+                this.classList.add("shake");
+                
+                this.textContent = "杨偲灏是gay\n往下滑";
+                
+                setTimeout(() => {
+                    this.classList.remove("shake");
+                }, 500);
+                
+                setTimeout(() => {
+                    this.textContent = "点击我";
+                }, 3000);
+            });
+        </script>
+    </body>
+</html>
